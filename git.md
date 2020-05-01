@@ -51,4 +51,6 @@
         * 打开gitHub，点击右上角 '+'号右边的图标中的settings,选中其中的 `SSH and GPG keys`,在点击 `New SSH key`，填写title，将上面的公钥内容复制到key框中，点击 Add,成功完成设置
         * 接下来创建gitHub仓储的步骤与之前的一致，但是上传的时候，复制SSH的链接地址，在要备份的文件复父级目录打开 `git Bash Here`中 键入 `$ git push SSH链接地址 master`
   
-    
+- 从GitHub的仓储中下载文件
+    + 打开文件将存放目录，左击打开 `Git Bash Here`，在里面初始化一个仓储用来存放即将下载的文件
+    + 键入 `$ git pull 链接地址 master`,链接地址可以是 HTTPS链接，也可以是 SSh链接

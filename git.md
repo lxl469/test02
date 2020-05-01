@@ -44,6 +44,11 @@
         * 在需要上传的文件的父级目录下打开 `Git Bash Here`，在里面键入 `$ git push https://github.com/lxl469/test01.git master`
         * 注意：这种上传方式会在第一次上传文件时要验证GitHub的账号和密码，存在风险
     + 第二种上传方式
-        * 在任意目录下打开 `Git Bash Here`,在里面
+        * 在任意目录下打开 `Git Bash Here`,在里面创建公钥和私钥，将公钥在GitHub中设置传递，私钥自己留着，在文件上传是会自动进行公钥和私钥之间关系验证，从而避免输入账号和密码
+        * 键入 `$ ssh -keygen -t sra -C '邮箱（随意，但要满足邮箱格式）'`,直接一路enter，生成公钥和私钥
+        * 打开C://Users/Administrtor/ssh,然后打开新生成的文件 `id_sra.pub`，复制里面的内容， `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGqgvw1D84qC0tsFMsSc1U4ddLFbc8riuZoOO1D44mztnusuC+ALiseZsFOyJHVNQePUvbACxcC9WJcbl8x9MxPmpKWTyyoN02JNM/cLKGqzdCArAkfsRJVHFoZveX2mZlUA5spU+ki0BYFWwEkfKp131mqPyGGk1QzbLjw5W8ztkJckJhdE5BBkU6BpWXZPTRzXnjl2g4lE7VQCy3YV2W+gOXyE4yAwcgB6nzEiNt6I3sryMvIMXjNOMN66CKKPiula7MTmk3hJss7Gvsi7K/EzFeSQdZ2Sc88od0lgmY4RusP/2QfRA2BzDv+SaDiqM+hnA9GTOVB339ZMukPEcr lxl@qq.com
+`
+        * 打开gitHub，点击右上角 '+'号右边的图标中的settings,选中其中的 `SSH and GPG keys`,在点击 `New SSH key`，填写title，将上面的公钥内容复制到key框中，点击 Add,成功完成设置
+        * 接下来创建gitHub仓储的步骤与之前的一致，但是上传的时候，复制SSH的链接地址，在要备份的文件复父级目录打开 `git Bash Here`中 键入 `$ git push SSH链接地址 master`
   
     

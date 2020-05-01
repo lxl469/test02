@@ -35,5 +35,15 @@
     + `$ git checkout 分支名字` ----表示切换到具体分支
     + `$ git merge dev` ----将分支dev合并到当前分支，注意的是合并dev分支时，当前所处的分支环境必须是其他分支（如：master），否则会报错
     + 注意: 在某子分支（如：dev）中查询 历史本分版本是可以查询到包含主线分支（master）和自身分支中的所有版本信息的，但是在主线分支中查询历史备份版本时（子分支未合并前）只能查询到主线分支中的 所有历史版本信息
+    
+- 代码上传服务器-----为了团队内成员代码共享，不通过文件发送和U盘传送，成员直接从GitHub（当做git的服务器）的仓储中下载备份的文件,文件上传 gitHub 的步骤：
+    + 第一种上传方式：
+        * 登录gitHub账户，右上角点击 '+'号，点击 New repository
+        * 创建仓储来存储文件，在跳转的页面内的 repository name 中写入仓储名，description中写入仓储描述（可选），选择公开public,最后 create repository
+        * 复制跳转页面中HTTPS框内的链接 `https://github.com/lxl469/test01.git`
+        * 在需要上传的文件的父级目录下打开 `Git Bash Here`，在里面键入 `$ git push https://github.com/lxl469/test01.git master`
+        * 注意：这种上传方式会在第一次上传文件时要验证GitHub的账号和密码，存在风险
+    + 第二种上传方式
+        * 在任意目录下打开 `Git Bash Here`,在里面
   
     
